@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+.Calculadora {
+  background: #fffdfb;
+  height: fit-content;
+  width: 22rem;
+  padding: 1rem;
+  margin: 1rem;
+  box-sizing: border-box;
+  font-size: 2rem;
+  border-radius: 0.7rem;
 }
 
-.App-logo {
-  height: 40vmin;
+@media (min-width:578px) {
+  .Calculadora {
+    width: 35rem;
+    height: fit-content;
+    padding: 1.2rem;
+  }
+}
+
+.Calculadora-contenido {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+@media (min-width:578px) {
+  .Calculadora-contenido {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: max-content;
+    gap: 1.3rem;
+  }
+}
+
+.Calculadora-input {
+  width: 100%;
+  height: 4.5rem;
+  margin: 1rem 0 1.5rem 0;
+  text-align: end;
+  border: none;
+  font-size: 2rem;
+  border: 0.8rem solid #fff;
+  box-sizing: border-box;
+  box-shadow: #26c4a4 0 0 0 0.2rem;
+  border-radius: 0.35rem;
   pointer-events: none;
+  user-select: none;
+  cursor:none;
+  caret-color: transparent;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Calculadora-boton-igual {
+  grid-column: 2/5;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button {
+  font-size: 1.5rem;
+  border: none;
+  background: #1abb9c;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 0.5rem;
+  height: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  scale: calc(1.05);
+  background: #0e7c66;
+  transition: ease-in-out 0.2s;
 }
